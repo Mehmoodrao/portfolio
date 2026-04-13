@@ -1,0 +1,161 @@
+.experience-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.subsection-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.experience-list,
+.qualification-list {
+  position: relative;
+}
+
+.experience-list::before,
+.qualification-list::before {
+  content: '';
+  position: absolute;
+  left: 23px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #667eea, #764ba2);
+}
+
+.experience-card,
+.qualification-card {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 60px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.experience-dot,
+.qualification-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 4px white, 0 0 0 8px #667eea;
+}
+
+.experience-content,
+.qualification-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.experience-content:hover,
+.qualification-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.2);
+}
+
+.position,
+.degree {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.company {
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.school {
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.duration,
+.year {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .subsection-title {
+    font-size: 1.2rem;
+  }
+
+  .experience-card,
+  .qualification-card {
+    margin-bottom: 1.5rem;
+    padding-left: 50px;
+  }
+
+  .experience-dot,
+  .qualification-dot {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 0 3px white, 0 0 0 6px #667eea;
+  }
+
+  .experience-list::before,
+  .qualification-list::before {
+    left: 17px;
+  }
+}
